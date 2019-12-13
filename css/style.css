@@ -2,3 +2,9 @@ body{
     background-color: rgb(155, 172, 196);
     padding: 100px;
 }
+button{
+	padding: 15px 30px;
+	background-color: yellow;
+	border-radius: 4px;
+	box-shadow: 3px 3px 3px aqua;
+}
