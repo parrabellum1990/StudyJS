@@ -62,3 +62,4 @@ var rectangleArea = function (height, width) {
 };
 
 alert(rectangleArea(3, 5) + "m2");
+var newVariebles = "someExtasions";
