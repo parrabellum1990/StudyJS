@@ -1,3 +1,4 @@
+
 /*
 //первый вариант
 var time = 3;
@@ -54,12 +55,16 @@ var calculateDistance = function () {
 calculateDistance();
 */
 
-// var height = 3;
-// var width = 5;
+// Калькулятор площади
 
-var rectangleArea = function (height, width) {
-    return 2 * (width + height);
-};
+// var rectangleArea = function (height, width) {
+//     return 2 * (width + height);
+// };
+// alert(rectangleArea(3, 5) + "m2");
 
-alert(rectangleArea(3, 5) + "m2");
-var newVariebles = "someExtasions";
+// Калькулятор напряжения
+
+// var Voltage = function (Amperage, Resistane) {
+//     return (Amperage * Resistane);
+// };
+// alert(Voltage(2, 15) + " ВОЛЬТ");
