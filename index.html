@@ -1,15 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
-    <title>project01</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Закон Ома</title>
 </head>
+
 <body>
-    <div class="study">Content</div>
-    <button id="test">HELLO WORLD</button>
+    <main class="main-section">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="alert alert-success mt-3" role="alert">
+                        <h4 class="alert-heading text-center">Закон Ома</h4>
+                        <div class="alert-flex-wrap d-flex align-items-center">
+                            <p>Закон Ома — эмпирический физический закон, определяющий связь электродвижущей силы
+                                источника
+                                (или электрического напряжения) с силой тока, протекающего в проводнике, и
+                                сопротивлением
+                                проводника. Установлен Георгом Омом в 1826 году (опубликован в 1827 году) и назван в его
+                                честь.
+                            </p>
+                            <img src="img/om-georg-simon.jpg" width="150" height="150" alt="Георг Симон Ом">
+                        </div>
+                        <hr>
+                        <p class="mb-0">Давайте воспользуемся достижениями великого учённого!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col">
+                    <div class="parametr-wrap d-flex">
+                        <!-- Кнопка выбора "Искомого параметра (U.R.A.I)" -->
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Искомый параметр
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a id="searchVoltage" class="clear-func dropdown-item" href="#">Напряжение - U</a>
+                                <a id="searchAmperage" class="clear-func dropdown-item" href="#">Ток - A</a>
+                                <a id="searchResistance" class="clear-func dropdown-item" href="#">Сопротивление - R</a>
+                                <a id="searchPower" class="clear-func dropdown-item" href="#">Мощность - P</a>
+                            </div>
+                        </div>
+                        <!-- Статус "Искомого параметра" -->
+                        <button type="button" class="btn btn-primary">
+                            Параметр <span id="searchingParametr" class="badge badge-light"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="parametr-wrap d-flex justify-content-end">
+                        <!-- Статус "Известных параметров" -->
+                        <button type="button" class="btn btn-primary">
+                            Параметр <span id="statusParametr" class="badge badge-light"></span>
+                        </button>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Извесные параметры
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a id="firstParametr" class="dropdown-item" href="#"></a>
+                                <a id="secondParametr" class="dropdown-item" href="#"></a>
+                                <a id="thirdParametr" class="dropdown-item" href="#"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col">
+                    <form>
+                        <div class="parX d-flex align-items-end justify-content-center">
+                            <div class="parX-wrap">
+                                <label id="labelParametrX"></label>
+                                <input id="parametrX" type="number" class="form-control form-size-size" required>
+                            </div>
+                            <!-- <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Единицы измерения:
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#"></a>
+                                    <a class="dropdown-item" href="#"></a>
+                                    <a class="dropdown-item" href="#"></a>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="btn-wrap d-flex justify-content-around">
+                            <button id="searchingParametrResult" type="button" class="btn btn-primary">
+                                <span class="badge badge-light"></span>
+                            </button>
+                            <div class="wrap-btn">
+                                <button id="resultCalculate" type="button" class="btn btn-success">Расчитать!</button>
+                                <button id="clearCalculate" type="button" class="btn btn-danger">Очистить!</button>
+                            </div>
+                        </div>
+                        <div class="parY d-flex align-items-end justify-content-center">
+                            <div class="parY-wrap">
+                                <label id="labelParametrY"></label>
+                                <input id="parametrY" type="number" class="form-control form-size" required>
+                            </div>
+                            <!-- <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Единицы измерения:
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#"></a>
+                                    <a class="dropdown-item" href="#"></a>
+                                    <a class="dropdown-item" href="#"></a>
+                                </div>
+                            </div> -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div id="resultTotal" class="alert alert-primary mt-5" role="alert">
+                        Значение равно:
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>

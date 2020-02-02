@@ -1,11 +1,21 @@
-html,
-body{
-    background-color: rgb(176, 204, 243);
-    padding: 100px;
+.main-section{
+	height: 100vh;
+	background-image: url('../img/1.jpg');
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
-button{
-	padding: 15px 30px;
-	background-color: yellow;
-	border-radius: 4px;
-	box-shadow: 3px 3px 3px aqua;
+
+.show{
+	display: block;
 }
+
+.hide{
+	display: none;
+}
+
+/* .form-size{
+	display: block;
+	width: 25% !important;
+	margin: 0 auto;
+} */
