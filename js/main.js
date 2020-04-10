@@ -237,15 +237,20 @@ $(function () {
   });
 });
 // Валидация полей инпута:
-var xLenght = parametrX.lenght;
+
 $(function () {
   $('#resultCalculate').click(function (e) {
     e.preventDefault();
-    if (xLenght == 0) {
-      console.log('qwewqe');
-      alert('manda!');
-    } else {
-
+    let parametrXval = $('#parametrX').val();
+    let parametrYval = $('#parametrY').val();
+    if (parametrXval === "" || parametrYval === "") {
+      console.log('пусто');
+      alert("Введите извесный параметр!");
+    }
+    let searchParamValid = document.getElementById('searchingParametrResult').outerText;
+    console.log(searchParamValid);
+    if (searchParamValid === "") {
+      alert("Введите искомый параметр!");
     }
   });
 });
